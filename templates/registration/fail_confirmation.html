@@ -1,0 +1,28 @@
+{% load i18n static %}
+{% block content %}
+    <style>
+        .login-box {
+            max-width: 95% !important;
+        }
+    </style>
+    <p class="login-box-msg">{{ jazzmin_settings.welcome_sign }}</p>
+    <div>
+        <div class="callout callout-danger text-center text-danger text-bold">
+            <p>{{ message }}</p>
+        </div>
+        <div class="mt-2">
+            <div class="password-reset-link" style="text-align: center;">
+                <a href="{% url 'login' %}">
+                    {% trans 'Ir al login' %}
+                </a>
+            </div>
+        </div>
+        <div class="mt-2">
+            <div class="password-reset-link" style="text-align: center;">
+                <a href="{% url 'register' %}">
+                    {% trans 'Crear cuenta en AlmacenesPyme' %}
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
